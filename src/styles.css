@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-toolbar-row {
+    background-color: #007bff; /* Couleur de fond de la barre d'outils */
+    color: white; /* Couleur du texte dans la barre d'outils */
+    justify-content: space-between; /* Alignement des éléments de la rangée */
+  }
