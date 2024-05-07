@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './questionnaire.component.css'
 })
 export class QuestionnaireComponent {
+  public compteur = 0 ;
 
+  liste_question = [
+    "Quel sera l'usage de votre ordinateur ?",
+    "Avez-vous faim ?",
+    "Voulez-vous un ordinateur portable ou fixe ?"
+  ]
+
+
+
+  incrCompteur() {
+    this.compteur++;
+  }
+  decrCompteur(){
+    this.compteur--;
+  }
 }
