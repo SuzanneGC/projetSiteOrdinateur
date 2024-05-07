@@ -2,7 +2,12 @@
   <mat-toolbar-row>
     <p>logo </p>
     <p>nom </p>
-    <p>menu </p>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="navigateToQuestionnaire()">Questionnaire</button>
+      <button mat-menu-item>Propositions ordinateurs</button>
+      <button mat-menu-item>Composition ordinateur</button>
+    </mat-menu>
   </mat-toolbar-row>
  </mat-toolbar>
 
@@ -11,7 +16,7 @@
  <mat-toolbar>
   <mat-toolbar-row>
     <p>Nous contacter </p>
-    <p>Mentions légales 2</p>
-    <p>Reporter un bug </p>
+    <p>Mentions légales </p>
+    <button mat-button (click)="navigateToBugReport()">Reporter un bug</button>
   </mat-toolbar-row>
  </mat-toolbar>
