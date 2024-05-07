@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    height: 100vh;
+  }
+  
+  #questionnaire {
+    margin-left: 23vw;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  #checkboxes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-left: 20px;
+    width: 60%;
+  }
+  
+  #checkboxes-container input + label {
+    width: calc(50% - 10px); 
+    margin: 5px;
+  }
+
+  #boutons{
+    margin-left: -23vw;
+    position: absolute;
+    bottom : 75px ;
+    padding: 10px;
+  }
+
+  #boutons button:last-child {
+    margin-left: calc(80vw - 100px);
+  }
+
+  button{
+    border-radius: 5px;
+    border: none;
+    background-color:#91c5fd ;
+    width: 100px;
+    height: 30px;
+    transition: background-color 0.3s;
+  }
+
+  button:hover{
+    background-color:#528ece ;
+  }

@@ -1,12 +1,20 @@
+<body>
+
 <app-barre-de-progression></app-barre-de-progression>
 
-<form id = "question">
+<div id = "questionnaire">
     <h1>Question n° {{this.numeroQuestion}}</h1>
     <h2 id = "question">{{liste_question[numeroQuestion - 1]}}</h2>
-    <form id = "checkboxes-container">
-        <input type="radio" value="Portable" class = "premiereReponse" name = "reponse"><label>{{liste_reponses[numeroQuestion - 1][0]}}</label>
-        <input type="radio" value="Fixe" class = "premiereReponse" name = "reponse"><label>{{liste_reponses[numeroQuestion - 1][1]}}</label>
+    <form>
+        <div id = "checkboxes-container">
+            <input type="radio" value="Portable" id = "1" class = "premiereReponse" name = "reponse"><label for = "1">{{liste_reponses[numeroQuestion - 1][0]}}</label>
+            <input type="radio" value="Fixe" id = "2" class = "premiereReponse" name = "reponse"><label for = "1">{{liste_reponses[numeroQuestion - 1][1]}}</label>
+        </div>
+        <div id = "boutons">
+            <button type="button" (click)="decrCompteur()">Précédent</button>
+            <button type="button" (click)="incrCompteur()">Suivant</button>
+        </div>
     </form>
-    <button type="button" (click)="decrCompteur()">Précédent</button>
-    <button type="button" (click)="incrCompteur()">Suivant</button>
-</form>
+</div>
+
+</body>

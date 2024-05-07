@@ -9,18 +9,27 @@ body{
 
 p{
     width: 80%;
+    text-align: justify;
 }
 
-#demarrer{
+#demarrer {
     background-color: #007bff;
     width: 300px;
     height: 50px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer; /* Ajouter un curseur pointer pour indiquer que la div est cliquable */
+    transition: background-color 0.3s;
 }
 
-a{
+#demarrer:hover{
+    background-color: #015bbc;
+}
+
+#demarrer a {
     color: aliceblue;
     font-size: larger;
-}
+    text-decoration: none; /* Supprimer le soulignement du lien */
+  }

@@ -13,7 +13,7 @@ export class majPourcentage {
   constructor() {}
 
   mettreAJourPourcentage(nouveauPourcentage: number) {
-    this.pourcentageSource.next(nouveauPourcentage);
+    this.pourcentageSource.next(Math.round(nouveauPourcentage));
     }
   
   getPourcentage(): Observable<number> {

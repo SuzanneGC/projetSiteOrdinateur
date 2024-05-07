@@ -40,6 +40,7 @@ export class QuestionnaireComponent implements OnInit {
   constructor(private majPourcentageService : majPourcentage, private router: Router){}
 
   createCheckboxes(): void {
+    let id = 0 ;
     const divCheckboxes = document.getElementById('checkboxes-container');
     if (divCheckboxes == null) {
       console.error("L'élément avec l'identifiant 'checkboxes-container' n'a pas été trouvé.");
@@ -52,17 +53,22 @@ export class QuestionnaireComponent implements OnInit {
           const checkbox = document.createElement('input');
           checkbox.type = 'checkbox';
           checkbox.value = reponses[i];
+          checkbox.id = id.toString();
 
           const label = document.createElement('label');
           label.appendChild(checkbox);
           label.appendChild(document.createTextNode(reponses[i]));
+          label.setAttribute('for', id.toString());
 
           divCheckboxes.appendChild(label);
+
+          id += 1 ;
       }
   }
 }
 
   createRadio(): void {
+    let id = 0 ;
     const divRadio = document.getElementById('checkboxes-container');
     if (divRadio == null) {
       console.error("L'élément avec l'identifiant 'checkboxes-container' n'a pas été trouvé.");
@@ -76,6 +82,7 @@ export class QuestionnaireComponent implements OnInit {
           radio.type = 'radio';
           radio.value = reponses[i];
           radio.name = "reponse"
+          radio.id = id.toString();
 
           if (this.numeroQuestion === 1){
             radio.classList.add("premiereReponse") ;
@@ -88,8 +95,11 @@ export class QuestionnaireComponent implements OnInit {
           const label = document.createElement('label');
           label.appendChild(radio);
           label.appendChild(document.createTextNode(reponses[i]));
+          label.setAttribute('for', id.toString());
 
           divRadio.appendChild(label);
+
+          id += 1 ;
       }
     }
   }
@@ -124,17 +134,50 @@ export class QuestionnaireComponent implements OnInit {
     this.majPourcentageService.mettreAJourPourcentage(this.pourcentage);  
     if (this.numeroQuestion > 0)
       {this.typeReponse();}
-    else{this.router.navigate(['/']);;}
+    else{this.router.navigate(['/']);}
   }
 
   ngOnInit(){
-    const radiosPremiereQuestion = document.querySelectorAll('.premiereReponse');
-    radiosPremiereQuestion.forEach(radio => {
-      radio.addEventListener('change', (event) => {
-        const target = event.target as HTMLInputElement;
-        this.reponsePremiereQuestion = target.value;
+    const reponses = this.liste_reponses[this.numeroQuestion - 1];
+    let id = 0 ;
+    const divRadio = document.getElementById('checkboxes-container');
+    if (divRadio == null) {
+      console.error("L'élément avec l'identifiant 'checkboxes-container' n'a pas été trouvé.");
+    } else {
+      divRadio.innerHTML = '';
+
+      for (let i = 0; i < reponses.length; i++) {
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.value = reponses[i];
+        radio.name = "reponse"
+        radio.id = id.toString();
+
+        if (this.numeroQuestion === 1){
+          radio.classList.add("premiereReponse") ;
+          radio.addEventListener('change', (event) => {
+            const target = event.target as HTMLInputElement;
+            this.reponsePremiereQuestion = target.value;
+        });
+        }
+
+        const label = document.createElement('label');
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(reponses[i]));
+        label.setAttribute('for', id.toString());
+
+        divRadio.appendChild(label);
+
+        id += 1 ;
+        }
+          const radiosPremiereQuestion = document.querySelectorAll('.premiereReponse');
+          radiosPremiereQuestion.forEach(radio => {
+            radio.addEventListener('change', (event) => {
+              const target = event.target as HTMLInputElement;
+              this.reponsePremiereQuestion = target.value;
+            });
       });
-    });
+    }
   }
 
 }
