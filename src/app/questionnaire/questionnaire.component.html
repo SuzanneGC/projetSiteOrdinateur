@@ -1,9 +1,12 @@
-<p>Ceci sera la barre de progression</p>
+<app-barre-de-progression></app-barre-de-progression>
 
 <form id = "question">
-    <h1>Question n° {{this.compteur}}</h1>
-    <h2>{{liste_question[compteur%3]}}</h2>
-    <p>insérer ici un form avec des cases à cocher</p>
+    <h1>Question n° {{this.numeroQuestion}}</h1>
+    <h2 id = "question">{{liste_question[numeroQuestion - 1]}}</h2>
+    <form id = "checkboxes-container">
+        <input type="radio" value="Portable" class = "premiereReponse" name = "reponse"><label>{{liste_reponses[numeroQuestion - 1][0]}}</label>
+        <input type="radio" value="Fixe" class = "premiereReponse" name = "reponse"><label>{{liste_reponses[numeroQuestion - 1][1]}}</label>
+    </form>
     <button type="button" (click)="decrCompteur()">Précédent</button>
     <button type="button" (click)="incrCompteur()">Suivant</button>
 </form>
