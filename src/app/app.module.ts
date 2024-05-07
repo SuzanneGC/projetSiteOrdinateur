@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomePageComponent } from './home-page/home-page.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
+import { PropositionOrdinateurComponent } from './proposition-ordinateur/proposition-ordinateur.component';
+import { PropositionPageComponent } from './proposition-page/proposition-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    QuestionnaireComponent
+    QuestionnaireComponent,
+    PropositionOrdinateurComponent,
+    PropositionPageComponent
   ],
   imports: [
     BrowserModule,

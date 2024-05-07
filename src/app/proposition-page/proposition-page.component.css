@@ -1,0 +1,13 @@
+.centrerHorizon{
+    text-align: center; 
+    padding : 5px;
+}
+.encadrement{
+    display: inline-block;
+    padding: 10px; /* espace autour */
+    border : 3px solid rgb(72, 213, 173);  
+}
+
+.proposition{
+    padding : 5px;
+}

@@ -1,0 +1,54 @@
+.encadrement{
+    display: inline-block;
+    padding: 10px; /* espace autour */
+    border : 3px solid rgb(72, 213, 173);  
+}
+
+.centrerHorizon{
+    text-align: center; 
+    padding : 5px;
+}
+
+.blocProposition {
+    display: flex;
+    background-color: #e5f3f3; /* Vert clair */
+    padding: 20px;
+    border-radius: 10px;  
+    border : 3px solid rgb(72, 213, 173);
+    height : auto;
+    width: auto;
+  }
+
+.image {
+flex: 1;
+display : flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.image img {
+max-width: 100%;
+height: auto;
+max-height: 200px;
+width: auto;
+}
+
+.text-container {
+flex: 2; /* proportion d'espace par rapport aux autres elements du flexbox */
+padding-left: 20px;
+display : flex;
+}
+
+.description{
+    flex : 3;
+    padding : 4px;
+}
+
+.autresLien{
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
