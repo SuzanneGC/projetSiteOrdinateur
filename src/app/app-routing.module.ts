@@ -6,6 +6,7 @@ import { QuestionnaireComponent } from './questionnaire/questionnaire.component'
 const routes: Routes = [
   { path: '', component: HomePageComponent},
   { path: 'questionnaire', component: QuestionnaireComponent},
+  { path: 'rapporter-un-bug', component: RapporterUnBugComponent},
 
 ];
 

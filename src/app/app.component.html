@@ -2,8 +2,12 @@
   <mat-toolbar-row>
     <p>logo </p>
     <p>nom </p>
-    <p>menu </p>
-  </mat-toolbar-row>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="navigateToQuestionnaire()">Questionnaire</button>
+      <button mat-menu-item>Propositions ordinateurs</button>
+      <button mat-menu-item>Composition ordinateur</button>
+    </mat-menu>  </mat-toolbar-row>
  </mat-toolbar>
 
  <router-outlet></router-outlet>

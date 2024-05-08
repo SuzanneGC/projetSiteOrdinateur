@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { BarreDeProgressionComponent } from './barre-de-progression/barre-de-progression.component';
 import { majPourcentage } from './maj-pourcentage.service';
+import { RapporterUnBugComponent } from './rapporter-un-bug/rapporter-un-bug.component'
 
 
 @NgModule({
@@ -16,10 +17,12 @@ import { majPourcentage } from './maj-pourcentage.service';
     AppComponent,
     HomePageComponent,
     QuestionnaireComponent,
-    BarreDeProgressionComponent
+    BarreDeProgressionComponent,
+    RapporterUnBugComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AppRoutingModule,
     MatToolbarModule
   ],
@@ -27,3 +30,4 @@ import { majPourcentage } from './maj-pourcentage.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class VotreModule{ }
