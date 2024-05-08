@@ -1,0 +1,18 @@
+.composant{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #3498db;
+    background-color: #eaf2f8;
+    color: #3498db;
+    cursor: pointer;
+}
+
+
+#description {
+    margin-top: 20px; 
+    padding: 10px; 
+    border: 2px solid #3498db; 
+    background-color: #eaf2f8; 
+    color: #3498db; }
