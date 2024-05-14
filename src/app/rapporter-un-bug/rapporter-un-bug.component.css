@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px; 
+  }
+  
+  .bug-form {
+    max-width: 600px; 
+    width: 100%;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 150px; 
+    margin-bottom: 10px; 
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+  }
+
+  .buttons button:hover {
+    background-color: rgb(42, 139, 199);
+  }
+  
+  

@@ -15,7 +15,17 @@
  
  <mat-toolbar>
   <mat-toolbar-row>
-    <p>Nous contacter </p>
+    <div class="container">
+      <button mat-button class="contact-button">Nous contacter</button>
+      <div class="info-box">
+        <p>Informations de contact :</p>
+        <ul>
+          <li>Adresse : 1 rue Aristote Le Mans</li>
+          <li>Téléphone : +33 1 23 45 67 89</li>
+          <li><div>ordinateur&commat;site-ordi.com</div></li>
+        </ul>
+      </div>
+    </div>    
     <p>Mentions légales </p>
     <button mat-button (click)="navigateToBugReport()">Reporter un bug</button>
   </mat-toolbar-row>

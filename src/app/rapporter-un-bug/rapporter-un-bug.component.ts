@@ -11,7 +11,7 @@ export class RapporterUnBugComponent {
   constructor(private router: Router) { }
 
   public navigateToHomePage() {
-    this.router.navigate(['/home-page']);
+    this.router.navigate(['']);
   }
 }
 
