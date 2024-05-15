@@ -1,0 +1,4 @@
+<h2>Filtre Tri</h2>
+<select [(ngModel)]="selectedOption">
+    <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+  </select>
