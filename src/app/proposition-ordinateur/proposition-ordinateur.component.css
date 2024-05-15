@@ -1,7 +1,7 @@
 .encadrement{
     display: inline-block;
     padding: 10px; /* espace autour */
-    border : 3px solid rgb(72, 213, 173);  
+    border : 3px solid rgb(122, 183, 227);  
 }
 
 .centrerHorizon{
@@ -14,7 +14,7 @@
     background-color: #e5f3f3; /* Vert clair */
     padding: 20px;
     border-radius: 10px;  
-    border : 3px solid rgb(72, 213, 173);
+    border : 3px solid rgb(94, 178, 238);
     height : auto;
     width: auto;
   }

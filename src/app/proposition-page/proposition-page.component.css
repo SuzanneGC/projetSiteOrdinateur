@@ -5,9 +5,21 @@
 .encadrement{
     display: inline-block;
     padding: 10px; /* espace autour */
-    border : 3px solid rgb(72, 213, 173);  
+    border : 3px solid rgb(94, 178, 238);  
 }
 
 .proposition{
     padding : 5px;
+}
+
+.ordi{
+    flex : 3;
+}
+
+.filtre{
+    flex : 1;
+}
+
+.disposition{
+    display: flex;
 }

@@ -1,13 +1,17 @@
-<h2>Choix composants</h2>
+<div>
+    <button (click)="toggleFilterMenu()">Choix composant</button>
+<input *ngIf="showFilterMenu" type="checkbox" [(ngModel)]="isChecked1" id="myCheckbox">
+<label *ngIf="showFilterMenu" for="myCheckbox">Composant 1</label>
+<br>
+<input *ngIf="showFilterMenu" type="checkbox" [(ngModel)]="isChecked2" id="myCheckbox">
+<label *ngIf="showFilterMenu" for="myCheckbox">Composant 2</label>
+<br>
+<input *ngIf="showFilterMenu" type="checkbox" [(ngModel)]="isChecked3" id="myCheckbox">
+<label *ngIf="showFilterMenu" for="myCheckbox">Composant 3</label>
+<br>
+<input *ngIf="showFilterMenu" type="checkbox" [(ngModel)]="isChecked4" id="myCheckbox">
+<label *ngIf="showFilterMenu" for="myCheckbox">Composant 4</label>
+  <button *ngIf="showFilterMenu" (click)="hideFilterMenu()">Valider</button>
+  <br>
+</div>
 
-<input type="checkbox" [(ngModel)]="isChecked1" id="myCheckbox">
-<label for="myCheckbox">Composant 1</label>
-<br>
-<input type="checkbox" [(ngModel)]="isChecked2" id="myCheckbox">
-<label for="myCheckbox">Composant 2</label>
-<br>
-<input type="checkbox" [(ngModel)]="isChecked3" id="myCheckbox">
-<label for="myCheckbox">Composant 3</label>
-<br>
-<input type="checkbox" [(ngModel)]="isChecked4" id="myCheckbox">
-<label for="myCheckbox">Composant 4</label>

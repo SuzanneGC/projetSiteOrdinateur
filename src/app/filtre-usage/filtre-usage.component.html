@@ -1,5 +1,5 @@
 <div>
-  <button (click)="toggleFilterMenu()">Filtre Tri</button>
+  <button (click)="toggleFilterMenu()">Filtre Usage</button>
   <br>
   <select *ngIf="showFilterMenu" [(ngModel)]="selectedOption">
     <option *ngFor="let option of options" [value]="option">{{ option }}</option>

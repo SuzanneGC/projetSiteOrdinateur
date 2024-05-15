@@ -10,4 +10,15 @@ export class FiltreComposantComponent {
   isChecked2: boolean = false;
   isChecked3: boolean = false;
   isChecked4: boolean = false;
+
+  showFilterMenu: boolean = false;
+
+  toggleFilterMenu() {
+    this.showFilterMenu = !this.showFilterMenu;
+  }
+
+  hideFilterMenu() {
+    this.showFilterMenu = false;
+  }
+
 }

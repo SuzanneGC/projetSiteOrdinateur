@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 export class FiltreTriComponent {
   options = ['Trier par prix croissant', 'Trier par prix décroissant', 'Trier par ordre alphabétique', 'Trier par popularité'];
   selectedOption: string = '';
+
+  showFilterMenu: boolean = false;
+
+  toggleFilterMenu() {
+    this.showFilterMenu = !this.showFilterMenu;
+  }
+
+  hideFilterMenu() {
+    this.showFilterMenu = false;
+  }
 }

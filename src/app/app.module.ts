@@ -12,6 +12,8 @@ import { PropositionOrdinateurComponent } from './proposition-ordinateur/proposi
 import { PropositionPageComponent } from './proposition-page/proposition-page.component';
 import { FiltreComposantComponent } from './filtre-composant/filtre-composant.component';
 import { FiltreTriComponent } from './filtre-tri/filtre-tri.component';
+import { FiltreUsageComponent } from './filtre-usage/filtre-usage.component';
+import { MenuFiltresComponent } from './menu-filtres/menu-filtres.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FiltreTriComponent } from './filtre-tri/filtre-tri.component';
     PropositionOrdinateurComponent,
     PropositionPageComponent,
     FiltreComposantComponent,
-    FiltreTriComponent
+    FiltreTriComponent,
+    FiltreUsageComponent,
+    MenuFiltresComponent
   ],
   imports: [
     BrowserModule,
